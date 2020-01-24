@@ -13,15 +13,31 @@
 
 using namespace std;
 
+void vidrioventana() {
+    glBegin(GL_TRIANGLES);
+
+    glColor3f(1.0f, 0.0f, 0.0f);
+
+    glVertex3f(0.32f, 0.13f, 0.0f);
+    glVertex3f(0.32f, -0.15f, 0.0f);
+    glVertex3f(0.40f, -0.15f, 0.0f);
+
+    /*glVertex3f(0.9f, -0.9f, 0.0f);
+    glVertex3f(-0.9f, -0.9f, 0.0f);
+    glVertex3f(0.9f, 0.9f, 0.0f);*/
+
+    glEnd();
+}
+
 void baseVentana() {
     glBegin(GL_TRIANGLE_STRIP);
 
     glColor3f(0.5f, 0.2f, 0.0f);
 
-    glVertex3f(0.0f, -0.4f, 0.0f);
-    glVertex3f(0.0f, -0.75f, 0.0f);
-    glVertex3f(0.3f, -0.4f, 0.0f);
-    glVertex3f(0.3f, -0.75f, 0.0f);
+    glVertex3f(0.3f, 0.0f, 0.0f);
+    glVertex3f(0.3f, -0.35f, 0.0f);
+    glVertex3f(0.55f, 0.0f, 0.0f);
+    glVertex3f(0.55f, -0.35f, 0.0f);
 
     glEnd();
 }
@@ -154,6 +170,7 @@ void dibujar() {
     casa();
     puerta();
     baseVentana();
+    vidrioventana();
 }
 
 int main()
