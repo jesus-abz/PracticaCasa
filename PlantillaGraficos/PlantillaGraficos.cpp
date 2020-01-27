@@ -13,18 +13,79 @@
 
 using namespace std;
 
+void pasto() {
+    glBegin(GL_LINES);
+    glColor3f(0.0f, 0.3f, 0.0f);
+
+    glVertex3f(-0.1f, -0.9f, 0.0f);
+    glVertex3f(0.0f, -0.85f, 0.0f);
+
+    glVertex3f(0.0f, -0.9, 0.0f);
+    glVertex3f(0.2f, 0.85f, 0.0f);
+
+    glEnd();
+}
+
+void tronco() {
+    glBegin(GL_TRIANGLE_STRIP);
+
+    glColor3f(0.5f, 0.3f, 0.1f);
+
+    glVertex3f(-0.85f, -0.1f, 0.0f);
+    glVertex3f(-0.85f, -0.80f, 0.0f);
+    glVertex3f(-0.6f, -0.1f, 0.0f);
+    glVertex3f(-0.6f, -0.80f, 0.0f);
+
+    glEnd();
+}
+
+void techo() {
+    glBegin(GL_TRIANGLES);
+
+    glColor3f(1.0f, 0.3f, 0.3f);
+    
+    glVertex3f(-0.4f, 0.1f, 0.0f);
+    glVertex3f(0.7f, 0.1f, 0.0f);
+    glVertex3f(0.15f, 0.5f, 0.0f);
+
+    glEnd();
+}
 void vidrioventana() {
     glBegin(GL_TRIANGLES);
 
-    glColor3f(1.0f, 0.0f, 0.0f);
-
-    glVertex3f(0.32f, 0.13f, 0.0f);
+    glColor3f(0.0f, 1.0f, 1.0f);
+    //vidrio UL
+    glVertex3f(0.32f, -0.02f, 0.0f);
     glVertex3f(0.32f, -0.15f, 0.0f);
     glVertex3f(0.40f, -0.15f, 0.0f);
 
-    /*glVertex3f(0.9f, -0.9f, 0.0f);
-    glVertex3f(-0.9f, -0.9f, 0.0f);
-    glVertex3f(0.9f, 0.9f, 0.0f);*/
+    glVertex3f(0.32f, -0.02f, 0.0f);
+    glVertex3f(0.40f, -0.02f, 0.0f);
+    glVertex3f(0.40f, -0.15f, 0.0f);
+    //vidrio UR
+    glVertex3f(0.45f, -0.02f, 0.0f);
+    glVertex3f(0.45f, -0.15f, 0.0f);
+    glVertex3f(0.53f, -0.15f, 0.0f);
+
+    glVertex3f(0.45f, -0.02f, 0.0f);
+    glVertex3f(0.53f, -0.02f, 0.0f);
+    glVertex3f(0.53f, -0.15f, 0.0f);
+    //vidrio DL
+    glVertex3f(0.32f, -0.20f, 0.0f);
+    glVertex3f(0.32f, -0.33f, 0.0f);
+    glVertex3f(0.40f, -0.33f, 0.0f);
+
+    glVertex3f(0.32f, -0.20f, 0.0f);
+    glVertex3f(0.40f, -0.20f, 0.0f);
+    glVertex3f(0.40f, -0.33f, 0.0f);
+    //vidrio DR
+    glVertex3f(0.45f, -0.20f, 0.0f);
+    glVertex3f(0.45f, -0.33f, 0.0f);
+    glVertex3f(0.53f, -0.33f, 0.0f);
+
+    glVertex3f(0.45f, -0.20f, 0.0f);
+    glVertex3f(0.53f, -0.20f, 0.0f);
+    glVertex3f(0.53f, -0.33f, 0.0f);
 
     glEnd();
 }
@@ -171,6 +232,9 @@ void dibujar() {
     puerta();
     baseVentana();
     vidrioventana();
+    techo();
+    tronco();
+    pasto();
 }
 
 int main()
