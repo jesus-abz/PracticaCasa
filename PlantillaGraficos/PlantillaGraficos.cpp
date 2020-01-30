@@ -13,15 +13,148 @@
 
 using namespace std;
 
+void solrayos() {
+    glBegin(GL_POLYGON);
+
+    glColor3f(1.0f, 0.7f, 0.0f);
+
+    glVertex3f(-1.0f, 0.7f, 0.0f);
+    glVertex3f(-0.9f, 0.5f, 0.0f);
+    glVertex3f(-0.85f, 0.75f, 0.0f);
+    glVertex3f(-0.7f, 0.6f, 0.0f);
+    glVertex3f(-0.775f, 0.78f, 0.0f);
+    glVertex3f(-0.6f, 0.8f, 0.0f);
+    glVertex3f(-0.725f, 0.9f, 0.0f);
+    glVertex3f(-0.61f, 1.0f, 0.0f);
+    glVertex3f(-1.0f, 1.0f, 0.0f);
+
+    glEnd();
+}
+
+void perilla() {
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.3f, 0.2f, 0.1f);
+    for (double i = 0; i < 360.0; i += 5.0) {
+        glVertex3f(0.05 /*ancho del circulo*/ * cos(i * 3.14159 / 180.0) + 0.22f /*posicion en x*/,
+                  (0.05 /*alto del circulo*/ * sin(i * 3.14159 / 180.0)) + -0.55f /*posicion en y*/, 0.0f);
+    }
+
+    glEnd();
+}
+
+void solbola() {
+    glBegin(GL_POLYGON);
+
+    glColor3f(1.0f, 1.0f, 0.0f);
+    for (double i = 0; i < 360.0; i += 5.0) {
+        glVertex3f(0.25 /*ancho del circulo*/ * cos(i * 3.14159 / 180.0) + -1.0f /*posicion en x*/,
+                  (0.25 /*alto del circulo*/ * sin(i * 3.14159 / 180.0)) + 1.0f /*posicion en y*/, 0.0f);
+    }
+
+    glEnd();
+}
+
+void nubes() {
+    glBegin(GL_POLYGON);
+
+    glColor3f(1.0f, 1.0f, 1.0f);
+    for (double i = 0; i < 360.0; i += 5.0) {
+        glVertex3f(0.15 /*ancho del circulo*/ * cos(i * 3.14159 / 180.0) + -0.15f /*posicion en x*/,
+                  (0.075 /*alto del circulo*/ * sin(i * 3.14159 / 180.0)) + 0.6f /*posicion en y*/, 0.0f);
+    }
+
+    glEnd();
+    glBegin(GL_POLYGON);
+
+    glColor3f(1.0f, 1.0f, 1.0f);
+    for (double i = 0; i < 360.0; i += 5.0) {
+        glVertex3f(0.15 /*ancho del circulo*/ * cos(i * 3.14159 / 180.0) + -0.05f /*posicion en x*/,
+                  (0.075 /*alto del circulo*/ * sin(i * 3.14159 / 180.0)) + 0.7f /*posicion en y*/, 0.0f);
+    }
+
+    glEnd();
+    glBegin(GL_POLYGON);
+
+    glColor3f(1.0f, 1.0f, 1.0f);
+    for (double i = 0; i < 360.0; i += 5.0) {
+        glVertex3f(0.15 /*ancho del circulo*/ * cos(i * 3.14159 / 180.0) + 0.45f /*posicion en x*/,
+            (0.075 /*alto del circulo*/ * sin(i * 3.14159 / 180.0)) + 0.7f /*posicion en y*/, 0.0f);
+    }
+
+    glEnd();
+    glBegin(GL_POLYGON);
+
+    glColor3f(1.0f, 1.0f, 1.0f);
+    for (double i = 0; i < 360.0; i += 5.0) {
+        glVertex3f(0.15 /*ancho del circulo*/ * cos(i * 3.14159 / 180.0) + 0.55f /*posicion en x*/,
+            (0.075 /*alto del circulo*/ * sin(i * 3.14159 / 180.0)) + 0.8f /*posicion en y*/, 0.0f);
+    }
+
+    glEnd();
+    glBegin(GL_POLYGON);
+
+    glColor3f(1.0f, 1.0f, 1.0f);
+    for (double i = 0; i < 360.0; i += 5.0) {
+        glVertex3f(0.15 /*ancho del circulo*/ * cos(i * 3.14159 / 180.0) + 0.65f /*posicion en x*/,
+                  (0.075 /*alto del circulo*/ * sin(i * 3.14159 / 180.0)) + 0.4f /*posicion en y*/, 0.0f);
+    }
+
+    glEnd();
+    glBegin(GL_POLYGON);
+
+    glColor3f(1.0f, 1.0f, 1.0f);
+    for (double i = 0; i < 360.0; i += 5.0) {
+        glVertex3f(0.15 /*ancho del circulo*/ * cos(i * 3.14159 / 180.0) + 0.75f /*posicion en x*/,
+                  (0.075 /*alto del circulo*/ * sin(i * 3.14159 / 180.0)) + 0.5f /*posicion en y*/, 0.0f);
+    }
+
+    glEnd();
+}
+
+void hojas() {
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.0f, 1.0f, 0.0f);
+    for (double i = 0; i < 360.0; i += 5.0) {
+        glVertex3f(0.25 /*ancho del circulo*/ * cos(i * 3.14159 / 180.0) + -0.6f /*posicion en x*/,
+                  (0.25 /*alto del circulo*/ * sin(i * 3.14159 / 180.0)) + -0.1f /*posicion en y*/, 0.0f);
+    }
+
+    glEnd();
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.0f, 1.0f, 0.0f);
+    for (double i = 0; i < 360.0; i += 5.0) {
+        glVertex3f(0.25 /*ancho del circulo*/ * cos(i * 3.14159 / 180.0) + -0.6f /*posicion en x*/,
+            (0.25 /*alto del circulo*/ * sin(i * 3.14159 / 180.0)) + 0.3f /*posicion en y*/, 0.0f);
+    }
+    glEnd();
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.0f, 1.0f, 0.0f);
+    for (double i = 0; i < 360.0; i += 5.0) {
+        glVertex3f(0.25 /*ancho del circulo*/ * cos(i * 3.14159 / 180.0) + -0.75f /*posicion en x*/,
+            (0.25 /*alto del circulo*/ * sin(i * 3.14159 / 180.0)) + 0.1f /*posicion en y*/, 0.0f);
+    }
+    glEnd();
+}
+
 void pasto() {
     glBegin(GL_LINES);
     glColor3f(0.0f, 0.3f, 0.0f);
 
-    glVertex3f(-0.1f, -0.9f, 0.0f);
+    glVertex3f(0.05f, -0.9f, 0.0f);
+    glVertex3f(0.1f, -0.85f, 0.0f);
+
+    glVertex3f(0.05f, -0.9, 0.0f);
     glVertex3f(0.0f, -0.85f, 0.0f);
 
-    glVertex3f(0.0f, -0.9, 0.0f);
-    glVertex3f(0.2f, 0.85f, 0.0f);
+    glVertex3f(0.35f, -0.9f, 0.0f);
+    glVertex3f(0.4f, -0.85f, 0.0f);
+
+    glVertex3f(0.35f, -0.9, 0.0f);
+    glVertex3f(0.3f, -0.85f, 0.0f);
 
     glEnd();
 }
@@ -32,9 +165,9 @@ void tronco() {
     glColor3f(0.5f, 0.3f, 0.1f);
 
     glVertex3f(-0.85f, -0.1f, 0.0f);
-    glVertex3f(-0.85f, -0.80f, 0.0f);
+    glVertex3f(-0.85f, -0.8f, 0.0f);
     glVertex3f(-0.6f, -0.1f, 0.0f);
-    glVertex3f(-0.6f, -0.80f, 0.0f);
+    glVertex3f(-0.6f, -0.8f, 0.0f);
 
     glEnd();
 }
@@ -235,6 +368,11 @@ void dibujar() {
     techo();
     tronco();
     pasto();
+    hojas();
+    nubes();
+    perilla();
+    solrayos();
+    solbola();
 }
 
 int main()
